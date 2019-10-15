@@ -2,14 +2,125 @@ include ./mixins.pug
 
 <!DOCTYPE html>
 html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Portfolio | main page
-  body
-    .wrapper
-      .maincontent
-        +image('content/user.jpg', 'user-pic')
-        +icon('link', 'link-class')
-        .icon-bg
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		title Portfolio
+	body
+		.wrapper
+			.parallax
+				section.intro
+					.container.intro__container
+
+						header.intro__header
+							.intro__logo
+								a(href="#").logo ЯС
+							.intro__menu
+								nav.nav
+								- var menu = ["Главная", "Обо мне", "Навыки","Работы", "Отзывы", "Связаться"]
+									ul.nav__list
+										each item in menu
+											li.nav__item
+												a(href="#").nav__link #{item}
+							.intro__links
+							- var icons = ["insta", "vk", "github"]
+								ul.socials
+								each item in icons
+									li.socials__icon
+										a(href="#").socials__link
+											+icon(`${item}`, "socials__icon")
+
+						.intro__content
+							.user-info
+								h1.user-info__desc Личный сайт <br>веб разработчика
+								h2.user-info__username Яна <br>Степанова
+
+						.intro__buttons
+							.scroll-down-button__text Скролл
+							.scroll-down-button__icon
+								a(href="#").socials__link
+									+icon("scroll", "socials__icon")
+
+				section.about
+					.container.about__container
+						.about__left
+							.user
+								.avatar.user__avatar
+									+image("content/user.jpg", "user__avatar-image")
+								ul.user__desc
+									-
+										var items = [
+										["Проживаю", "Питер"],
+										["Возраст", "27 лет"],
+										["Родилась", "16 ноября 1991"],
+										]
+									each item in items
+										li.user__desc-item
+											.user__key #{item[0]}
+											.user__value #{item[1]}
+						.about__right
+							h4.about__intro Привет, меня зовут
+							h2.section-title.about__title Яна Степанова
+							h4.content-desc.about__desc Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+							h4.content-desc.about__outro Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+
+				section.skills
+					.container.skills__container
+						.skills__content
+							h2.content-title.skills__content-title Чем я могу быть полезна вам
+							.content-desc.skills__desc
+								p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+						ul.skills-showcase
+							-
+								var skills = [
+									['Front-end',[['HTML5', 'stroke-dasharray: 100'], ['CSS3', 'stroke-dasharray: 100'], ['Javascript', 'stroke-dasharray: 100'], ['Jquery и Vue.js', 'stroke-dasharray: 100']]],
+									['Workflow', [['GIT', 'stroke-dasharray: 100'], ['Terminal','stroke-dasharray: 100'], ['Gulp', 'stroke-dasharray: 100'], ['Webpack', 'stroke-dasharray: 100']]]
+								]
+							each item in skills
+								li.skills-showcase__item.skills-row
+									h3.skills-row__title #{item[0]}
+									ul.skills-row__list
+										each skill in item[1]
+											li.skills-row__item
+												.skill
+													svg(viewBox='0 0 200 200' preserveAspectRatio='none').skill__shape
+														circle(r='80' cx='100' cy='100').skill__circle.skill__circle--position--under
+														circle(r='80' cx='100' cy='100')
+														-var progressBar= skill[1]
+														.skill__circle.skill__circle--position--above(style=progressBar)
+														//- linear-gradient()
+													.skill__title #{skill[0]}
+				section.portfolio
+					.container.portfolio__container
+						h2.section-title.portfolio__section-title Мои работы
+						.portfolio-content
+							.portfolio__left
+								.slider
+									-var previews = ['content/slider--1.jpg', 'content/slider--2.jpg', 'content/slider--3.jpg','content/slider--4.jpg', 'content/slider--5.jpg']
+										+image(previews[0], "slider__big-preview")
+										.slider__preview
+											ul.previews
+												- for (var i = 0; i < 3; i++)
+													li.previews__item
+														+image(previews[i], "slider__small-preview")
+										.slider__buttons
+											.slider-button
+												button.slider-button__item.slider-button__item--next >
+												button.slider-button__item.slider-button__item--prev <
+
+							.portfolio__right
+								.portfolio__tags
+									- var tags = ['HTML', 'CSS', 'Javascript']
+										ul.tags
+											-for (var i = 0; i < 3; i++)
+												li.tags__item #{tags[i]}
+								.portfolio__text
+									h3.content-title.portfolio__title Сайт школы образования
+									.content-desc.portfolio__desc
+										p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+									a.link-tag
+										+icon("link","link-tag__icon")
+										.link-tag__text Посмотреть сайт
+
+

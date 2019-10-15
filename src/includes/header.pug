@@ -1,0 +1,14 @@
+header.header
+  .container.container--header
+    .header__logo ЯС
+    ul.header__list
+    each n in ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
+     li= n
+    .socials.header__socials
+      ul.socials__list
+        li.socials__item
+          +icon('Instagram', 'socials__item')
+        li.socials__item
+          +icon('vk', 'socials__item')
+        li.socials__item
+          +icon('github', 'socials__item')

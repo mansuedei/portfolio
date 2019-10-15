@@ -9,7 +9,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = (env, argv) => {
   const isProductionBuild = argv.mode === "production";
-  const publicPath = '/';
+  const publicPath = '/'; //когда будем выкладывать на gihub pages, необходимо переместить файлы из папки dist. Если будет доп. вложенность от корня, то необходимо дописать сюда название этой папки
 
   const pcss = {
     test: /\.(p|post|)css$/,
