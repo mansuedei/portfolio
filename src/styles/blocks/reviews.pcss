@@ -1,5 +1,15 @@
 .reviews {
-	background-color: #504658;
+	position: relative;
+	&:before {
+		position: absolute;
+		content: "";
+		width: 616px;
+		height: 442px;
+		background-image: url("../images/background/reviews--leaf.png");
+		right: 0;
+		top: 0;
+		transform: translate(300px, -200px);
+	}
 }
 
 .reviews__container {

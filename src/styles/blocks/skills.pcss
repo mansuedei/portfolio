@@ -1,5 +1,22 @@
 .skills {
-	background-color: #504658;
+	position: relative;
+	background-image: linear-gradient(
+			to top,
+			rgba(35, 37, 41, 0.8),
+			rgba(35, 37, 40, 0.99)
+		),
+		url("../images/background/wood.png");
+	background-size: cover;
+	&:before {
+		position: absolute;
+		content: "";
+		width: 490px;
+		height: 707px;
+		background-image: url("../images/background/skills--keyboard.png");
+		left: 0;
+		bottom: 0;
+		/* transform: translate(300px, -200px); */
+	}
 }
 
 .skills__container {

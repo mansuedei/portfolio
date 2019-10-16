@@ -1,6 +1,17 @@
 .form {
 	display: flex;
 	width: 80%;
+	position: relative;
+		&:after {
+		position: absolute;
+		content: "";
+		width: 412px;
+		height: 786px;
+		background-image: url("../images/background/reviews--leaves.png");
+		right: 0;
+		top: 0;
+		transform: translate(200px, -400px);
+	}
 }
 
 #myForm {

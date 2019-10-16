@@ -1,0 +1,20 @@
+section.reviews
+	.container.reviews__container
+		.reviews-title
+			h2.section-title.reviews__section-title Что обо мне говорят
+			.reviews__buttons
+				.review-button
+					button.review-button__item.review-button__item--prev <
+					button.review-button__item.review-button__item--next >
+		.slider--reviews
+			ul.slider--reviews__list
+				-var reviews = [["Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!", "Ковальчук Дмитрий", "Основатель Loftschool","content/author__avatar--image-1.png"],["Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах", "Владимир Сабанцев", "Преподаватель", "content/author__avatar--image-2.png"]]
+				each review in reviews
+					li.review__item
+						.content-desc.review__item--desc #{review[0]}
+						.author.review__item--author
+							.author__avatar
+								+image(review[3], "author__avatar--image")
+							.author__desc
+								.author__desc--name #{review[1]}
+								.author__desc--position #{review[2]}
