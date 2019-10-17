@@ -35,6 +35,9 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	@include desktopHd {
+		width: 1080px;
+	}
 	// width: 1490px;
 
 	@include phones {
@@ -64,6 +67,7 @@ section {
 	font-weight: 600;
 	opacity: 0.5;
 	color: #ffffff;
+	line-height: 30px;
 }
 
 .fullscreen-section {

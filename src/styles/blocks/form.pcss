@@ -2,7 +2,7 @@
 	display: flex;
 	width: 80%;
 	position: relative;
-		&:after {
+	&:after {
 		position: absolute;
 		content: "";
 		width: 412px;
@@ -22,7 +22,7 @@
 
 .form__row {
 	display: flex;
-	margin-bottom: 20px;
+	margin-bottom: 100px;
 }
 
 .form__block {
@@ -45,16 +45,27 @@
 	} */
 }
 
-.form__block-title {
-	margin-left: 40px;
+.form__block--label {
+	position: absolute;
+	left: 45px;
+	bottom: 0;
 	font-size: 16px;
 	font-weight: 600;
 	opacity: 0.3;
 	color: #ffffff;
-	margin-bottom: 30px;
-	&:last-child {
-		margin-right: 0;
-	}
+	transition: 0.5s;
+	pointer-events: none;
+}
+
+.form__icon {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 30px;
+	height: 30px;
+	opacity: 0.3;
+	fill: #ffffff;
+	transition: 0.3s;
 }
 
 .form__input {
@@ -66,12 +77,21 @@
 	font-size: 18px;
 	font-weight: 700;
 	position: relative;
-}
-
-::placeholder {
-	color: #ffffff;
-	font-size: 18px;
-	font-weight: 700;
+	transition: 0.3s;
+	height: fit-content;
+	&:focus ~ label {
+		top: -30px;
+	}
+	&:valid ~ label {
+		top: -30px;
+	}
+	&:focus ~ .form__icon {
+		fill: #ff9a00;
+		opacity: 1;
+	}
+	&:focus ~ hr {
+		border-color: #ff9a00;
+	}
 }
 
 .form__textarea {
@@ -100,14 +120,4 @@
 
 .form__button {
 	margin-top: 60px;
-}
-
-.form__icon {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 30px;
-	height: 30px;
-	opacity: 0.3;
-	fill: #ffffff;
 }

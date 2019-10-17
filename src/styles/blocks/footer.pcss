@@ -41,8 +41,20 @@
 	border-radius: 50%;
 	fill: gray;
 	margin-right: 40px;
+	cursor: pointer;
+	transition: 0.3s;
 	&:last-child {
 		margin-right: 0;
+	}
+
+	&:hover {
+		opacity: 1;
+		border: 1px solid #ff9a00;
+	}
+
+	&:hover .socials__icon--footer {
+		fill: #ff9a00;
+		opacity: 1;
 	}
 }
 

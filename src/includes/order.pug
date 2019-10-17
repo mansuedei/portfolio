@@ -5,24 +5,53 @@ section.order
 			form(id="myForm", action="", clas=form__elem role="form")
 				.form__row
 					-var formIcons = ["user", "envelope", "message"]
-						label.form__block
-							.form__block-title Введите ваше имя
-							input(type="text", class="form__input", name="name", placeholder="Ковальчук Дмитрий", required)
+						.form__block
+							input(type="text", class="form__input", name="name", required)
+							label.form__block--label Введите ваше имя
 							+icon(`${formIcons[0]}`, "form__icon")
 							hr.form__line
 							.error
-						label.form__block
-							.form__block-title Введите ваш email
-							input(type="text", class="form__input", name="email", placeholder="loftschool@study.com", required)
+						.form__block
+							input(type="email", class="form__input", name="email", required)
+							label.form__block--label Введите ваш email
 							+icon(`${formIcons[1]}`, "form__icon")
 							hr.form__line
 							.error
 				.form__row
-					label.form__block
-						.form__block-title Сообщение к письму
-						textarea(class="form__textarea", name="comment", placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса", required)
+					.form__block
+						textarea(class="form__input", name="comment", required)
+						label.form__block--label Сообщение к письму
 						+icon(`${formIcons[2]}`, "form__icon")
 						hr.form__line
 						.error
 				.form__row
 					button(id="sendButton", type="submit", class="button" class="form__button") Отправить
+
+//- section.order
+//- 	.container.order__container
+//- 		h2.section-title.order__section-title Связаться со мной
+//- 		.form
+//- 			form(id="myForm", action="", clas=form__elem role="form")
+//- 				.form__row
+//- 					-var formIcons = ["user", "envelope", "message"]
+//- 						label.form__block
+//- 							.form__block-title Введите ваше имя
+//- 							input(type="text", class="form__input", name="name", placeholder="Ковальчук Дмитрий", required)
+//- 							+icon(`${formIcons[0]}`, "form__icon")
+//- 							hr.form__line
+//- 							.error
+//- 						label.form__block
+//- 							.form__block-title Введите ваш email
+//- 							input(type="email", class="form__input", name="email", placeholder="loftschool@study.com", required)
+//- 							+icon(`${formIcons[1]}`, "form__icon")
+//- 							hr.form__line
+//- 							.error
+//- 				.form__row
+//- 					label.form__block
+//- 						.form__block-title Сообщение к письму
+//- 						textarea(class="form__textarea", name="comment", placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса", required)
+//- 						+icon(`${formIcons[2]}`, "form__icon")
+//- 						hr.form__line
+//- 						.error
+//- 				.form__row
+//- 					button(id="sendButton", type="submit", class="button" class="form__button") Отправить

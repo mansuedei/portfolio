@@ -18,6 +18,12 @@
 .slider__small-preview {
 	width: 178px;
 	height: 100px;
+	overflow: hidden;
+	border: 1px solid transparent;
+	transition: 0.3s;
+	&:hover {
+		border: 1px solid #ff9a00;
+	}
 }
 
 .slider__buttons {
@@ -34,10 +40,17 @@
 	height: 50px;
 	background-color: #353e4e;
 	color: #ffffff;
+	transition: 0.3s;
+	&:hover {
+		background-color: #ff9a00;
+	}
 }
 
 .slider-button__item--prev {
 	color: grey;
+	&:hover {
+		color: #ffffff;
+	}
 }
 
 .slider__counter {
