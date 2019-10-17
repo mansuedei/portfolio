@@ -33,16 +33,6 @@
 	justify-content: flex-start;
 	position: relative;
 	margin-right: 40px;
-	/* &:before {
-		display: block;
-		position: absolute;
-		content: "";
-		background-image: url("/icons/message.svg");
-		background-size: 28px 28px;
-		height: 28px;
-		width: 28px;
-		stroke: #ffffff;
-	} */
 }
 
 .form__block--label {
@@ -53,7 +43,7 @@
 	font-weight: 600;
 	opacity: 0.3;
 	color: #ffffff;
-	transition: 0.5s;
+	transition: 0.3s;
 	pointer-events: none;
 }
 
@@ -80,7 +70,8 @@
 	transition: 0.3s;
 	height: fit-content;
 	&:focus ~ label {
-		top: -30px;
+		transform: translateY(-30px);
+		/* top: -30px; */
 	}
 	&:valid ~ label {
 		top: -30px;

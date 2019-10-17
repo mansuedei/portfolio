@@ -54,8 +54,19 @@
 .review__item {
 	width: 25%;
 	margin-right: 165px;
+	position: relative;
 	&:last-child {
 		margin-right: 0;
+	}
+	&:before {
+		position: absolute;
+		content: "";
+		width: 75px;
+		height: 63px;
+		background-image: url("../images/background/reviews--quotation.png");
+		left: 0;
+		top: 0;
+		transform: translateX(-100px);
 	}
 }
 

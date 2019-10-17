@@ -19,8 +19,6 @@ section.skills
 								.skill
 									svg(viewBox='0 0 200 200' preserveAspectRatio='none').skill__shape
 										circle(r='80' cx='100' cy='100').skill__circle.skill__circle--position--under
-										circle(r='80' cx='100' cy='100')
-										-var progressBar= skill[1]
-										.skill__circle.skill__circle--position--above(style=progressBar)
+										circle(r='80' cx='100' cy='100').skill__circle.skill__circle--position--above
 										//- linear-gradient()
 									.skill__title #{skill[0]}
