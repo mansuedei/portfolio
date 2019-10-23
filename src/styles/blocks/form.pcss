@@ -1,0 +1,114 @@
+.form {
+	display: flex;
+	width: 80%;
+	position: relative;
+	&:after {
+		position: absolute;
+		content: "";
+		width: 412px;
+		height: 786px;
+		background-image: url("../images/background/reviews--leaves.png");
+		right: 0;
+		top: 0;
+		transform: translate(200px, -400px);
+	}
+}
+
+#myForm {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.form__row {
+	display: flex;
+	margin-bottom: 100px;
+}
+
+.form__block {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	align-items: flex-start;
+	justify-content: flex-start;
+	position: relative;
+	margin-right: 40px;
+}
+
+.form__block--label {
+	position: absolute;
+	left: 45px;
+	bottom: 0;
+	font-size: 16px;
+	font-weight: 600;
+	opacity: 0.3;
+	color: #ffffff;
+	transition: 0.3s;
+	pointer-events: none;
+}
+
+.form__icon {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 30px;
+	height: 30px;
+	opacity: 0.3;
+	fill: #ffffff;
+	transition: 0.3s;
+}
+
+.form__input {
+	width: 90%;
+	margin-left: 40px;
+	background-color: transparent;
+	border: none;
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: 700;
+	position: relative;
+	transition: 0.3s;
+	height: fit-content;
+	&:focus ~ label {
+		transform: translateY(-30px);
+		/* top: -30px; */
+	}
+	&:valid ~ label {
+		top: -30px;
+	}
+	&:focus ~ .form__icon {
+		fill: #ff9a00;
+		opacity: 1;
+	}
+	&:focus ~ hr {
+		border-color: #ff9a00;
+	}
+}
+
+.form__textarea {
+	width: 50%;
+	height: auto;
+	margin-left: 40px;
+	background-color: transparent;
+	border: none;
+	resize: none;
+	overflow: hidden;
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.form__line {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	border: 0;
+	border-bottom: 1px solid #eee;
+	box-sizing: content-box;
+	transform: translateY(20px);
+}
+
+.form__button {
+	margin-top: 60px;
+}

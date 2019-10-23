@@ -1,0 +1,77 @@
+.skills {
+	position: relative;
+	background-image: linear-gradient(
+			to top,
+			rgba(35, 37, 41, 0.8),
+			rgba(35, 37, 40, 0.99)
+		),
+		url("../images/background/wood.png");
+	background-size: cover;
+	&:before {
+		position: absolute;
+		content: "";
+		width: 682px;
+		height: 983px;
+		background-image: url("../images/background/skills--keyboard.png");
+		left: 0;
+		bottom: 0;
+		transform: translate(-10px, 125px);
+	}
+}
+
+.skills__container {
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+.skills__content {
+	width: 50%;
+	margin-right: 230px;
+	padding-bottom: 80px;
+}
+
+.skills__content-title {
+	margin-bottom: 50px;
+}
+
+.skills__desc {
+	line-height: 30px;
+}
+
+.skills-showcase {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	padding-bottom: 80px;
+	z-index: 2;
+}
+
+.skills-row {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 45px;
+}
+
+.skills-row__title {
+	font-size: 24px;
+	font-weight: 700;
+	/* margin-top: 50px; */
+	margin-bottom: 20px;
+}
+
+.skills-row__list {
+	display: flex;
+}
+
+.skills-row__item {
+	width: 160px;
+	height: 160px;
+	margin-right: 37px;
+}
+
+.skill__title {
+	font-size: 18px;
+	font-weight: 700;
+	opacity: 0.5;
+}

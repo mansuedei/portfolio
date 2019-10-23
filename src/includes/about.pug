@@ -1,0 +1,22 @@
+section.about
+	.container.about__container
+		.about__left
+			.user
+				.avatar.user__avatar
+					+image("content/user.jpg", "user__avatar-image")
+				ul.user__desc
+					-
+						var items = [
+						["Проживаю", "Питер"],
+						["Возраст", "27 лет"],
+						["Родилась", "16 ноября 1991"],
+						]
+					each item in items
+						li.user__desc-item
+							.user__key #{item[0]}
+							.user__value #{item[1]}
+		.about__right
+			h4.about__intro Привет, меня зовут
+			h2.section-title.about__title Яна Степанова
+			h4.content-desc.about__desc Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+			h4.content-desc.about__outro Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
