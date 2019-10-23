@@ -45,6 +45,36 @@
 	}
 }
 
+.review-button__item--prev {
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		width: 8px;
+		height: 10px;
+		background-image: url("../images/background/reviews--prev.png");
+		display: block;
+		left: 40%;
+		top: 40%;
+		transform: translate (-50%, -50%);
+	}
+}
+
+.review-button__item--next {
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		width: 8px;
+		height: 10px;
+		background-image: url("../images/background/reviews--next.png");
+		display: block;
+		left: 40%;
+		top: 40%;
+		transform: translate (-50%, -50%);
+	}
+}
+
 .slider--reviews__list {
 	display: flex;
 	justify-content: flex-start;
