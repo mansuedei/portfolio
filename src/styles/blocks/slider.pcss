@@ -46,10 +46,33 @@
 	}
 }
 
+.slider-button__item--next {
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		width: 8px;
+		height: 10px;
+		background-image: url("../images/background/slider--next.png");
+		display: block;
+		left: 40%;
+		top: 40%;
+		transform: translate (-50%, -50%);
+	}
+}
+
 .slider-button__item--prev {
-	color: grey;
-	&:hover {
-		color: #ffffff;
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		width: 8px;
+		height: 10px;
+		background-image: url("../images/background/slider--prev.png");
+		display: block;
+		left: 40%;
+		top: 40%;
+		transform: translate (-50%, -50%);
 	}
 }
 
