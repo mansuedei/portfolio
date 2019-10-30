@@ -10,7 +10,7 @@ const thumbs = {
 };
 
 const btns = {
-	template: "#slider-display",
+	template: "#slider-btns",
 	components: {
 		thumbs,
 		btns
@@ -30,13 +30,18 @@ const btns = {
 
 const display = {
 	template: "#slider-display",
-	components: { thumbs }
+	components: { thumbs, btns },
+	props: {
+		works: Array,
+		currentWork: Object,
+		currentIndex: Number
+	}
 };
 
 const info = {
 	template: "#slider-info",
 	components: {
-		tags
+		taggings
 	},
 	props: {
 		currentWork: Object
@@ -48,8 +53,8 @@ const info = {
 	}
 };
 
-const tags = {
-	template: "#slider-tags",
+const taggings = {
+	template: "#slider-taggings",
 	props: {
 		tagsArray: Array
 	}

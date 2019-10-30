@@ -52,6 +52,7 @@
   ],
   "dependencies": {
     "normalize.css": "^8.0.1",
+    "parallax-js": "^3.1.0",
     "promptly": "^3.0.3",
     "pug": "^2.0.4",
     "request": "^2.88.0",

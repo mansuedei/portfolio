@@ -19,7 +19,7 @@ script(type="text/x-template")#slider-display
 				@slide="direction => $emit('slide', direction)"
 			)
 			thumbs(
-				:works="reversedWorks"
+				:works="works",
 				:currentWork="currentWork"
 			)
 
@@ -39,16 +39,15 @@ script(type="text/x-template")#slider-thumbs
 
 script(type="text/x-template")#slider-info
 	.works-slider__data
-		tags(
-			:tagsArray="tagsArray"
-		)
+		taggings
 		.works-slider__title {{currentWork.title}}
 		.works-slider__desc
 			p {{currentWork.desc}}
 		.works-slider__link 
 			a(:href="currentWork.link").iconed-link Посмотреть сайт
 
-script(type="text/x-template")#slider-tags
-	ul.works-slider__tags
-		li.works-slider__tag-item(v-for="tag in tagsArray")
-			.tag {{tag}}
+script(type="text/x-template")#slider-taggings
+	pre {{tagsArray}}
+	//- ul.works-slider__tags
+	//- 	li.works-slider__tag-item(v-for="tag in tagsArray")
+	//- 		.tag {{tag}}

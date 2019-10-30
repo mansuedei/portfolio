@@ -8,3 +8,4 @@ import "./scripts/skills";
 import "./scripts/portfolio";
 import "./scripts/FontAwesome";
 import "./scripts/Vue";
+import "./scripts/parallax";
