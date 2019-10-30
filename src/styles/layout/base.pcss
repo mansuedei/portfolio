@@ -35,12 +35,16 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	@include desktopHd {
+
+	@include desktop() {
 		width: 1080px;
 	}
-	// width: 1490px;
 
-	@include phones {
+	@include tablets() {
+		width: 688px;
+	}
+
+	@include phones() {
 		width: 85%;
 	}
 }

@@ -9,9 +9,11 @@ html(lang="ru")
 		title Portfolio
 	body
 		.wrapper
-				.parallax
-				include includes/header
-				include includes/intro
+			.maincontent
+				.welcome-section
+					include includes/parallax
+					include includes/header
+					include includes/intro
 				include includes/about
 				include includes/skills
 				include includes/portfolio
@@ -19,6 +21,8 @@ html(lang="ru")
 					include includes/reviews
 					include includes/order
 				include includes/footer
+
+		include ./templates/entry.pug
 
 
 
